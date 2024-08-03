@@ -1,0 +1,20 @@
+<Files "index.php">
+	AuthType Basic
+	AuthName "Home"
+	AuthUserFile /users/a/p/aperkel/.htpasswd
+	require user aaronperkel
+</Files>
+
+RewriteEngine on
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteCond %{REQUEST_URI} !/update_balance\.php [NC]
+RewriteCond %{REQUEST_URI} !/new_transaction\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_URI} !/update_balance\.php [NC]
+RewriteCond %{REQUEST_URI} !/new_transaction\.php [NC]
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+ErrorDocument 404 /notfound.html

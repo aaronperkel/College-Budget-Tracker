@@ -1,0 +1,135 @@
+:root {
+    --main-bg-color: #555555;
+    --sec-bg-color: #888;
+    --nav-bg-color: rgba(85, 85, 85, .8);
+    --main-text-color: #111111;
+    --background-odd: rgba(233, 233, 233, .8);
+    --background-even: rgba(253, 253, 233, .8);
+}
+
+* {
+    font-family: monospace;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0;
+}
+
+main,
+h1, h2, h3, h4, h5, h6,
+nav {
+    padding: 1%;
+}
+
+html {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+header h1, header a {
+    display: inline;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+}
+
+main, footer {
+    background-color: var(--sec-bg-color);
+}
+
+footer {
+    padding: 20px; 
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+table {
+    border: medium solid black;
+    border-collapse: collapse;
+    margin: auto;
+    width: 65%;
+    text-align: center;
+    margin-bottom: 2em;
+    table-layout: fixed;
+}
+
+td, th {
+    border: thin solid black;
+    padding: .5em;
+}
+
+tr:nth-child(odd) {
+    background-color: var(--background-odd);
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-even);
+}
+
+a:hover {
+    color: var(--main-text-color);
+}
+
+a:link, a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+input[type=text]:not(.balance-input),
+input[type=number] {
+    width: 60%;
+    padding: 4px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+input[type=date] {
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    width: 51%;
+    background-color: #999999;
+    padding: 12px;
+    margin: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--main-text-color)
+}
+
+input[type=submit]:hover {
+    background-color: #42b548;
+    color: white;
+}
+
+.h2-container {
+    display: grid;
+    grid-template-columns: 15% auto;
+    padding-bottom: 30px;
+}
+
+.h2-container input {
+    margin: auto;
+    padding: 2px;
+    padding-left: 0;
+    border: none;
+    background: transparent;
+    font-size: 1.5em;
+    font-family: monospace;
+    font-weight: bold;
+    width: 10%;
+}
