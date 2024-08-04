@@ -26,10 +26,9 @@
             $statement = $pdo->prepare($sql);
             $data = array($current_balance, $currentDate);
             $statement->execute($data);
+        }
     }
-}
-
-checkAndUpdateBalance($pdo);
+    checkAndUpdateBalance($pdo);
 ?>
         <main>
             <div class="h2-container">
@@ -64,7 +63,7 @@ checkAndUpdateBalance($pdo);
                         print '<tr>';
                         print '<td>' . $cell['date'] . '</td>';
                         print '<td>' . $cell['description'] . '</td>';
-                        print '<td>' . $cell['amount'] . '</td>';
+                        print '<td>$' . $cell['amount'] . '</td>';
                         print '<td><a href="receipts/' . $cell['receipt_link'] . '" target="_blank">View Receipt</a></td>';
                         print '</tr>';
                     }
@@ -79,7 +78,7 @@ checkAndUpdateBalance($pdo);
                     <tr>
                         <td><input type="date" id="date" name="date" required></td>
                         <td><input type="text" id="description" name="description" placeholder="Description:" required></td>
-                        <td><input type="number" id="amount" name="amount" step="0.01" placeholder="12.34" required></td>
+                        <td><input type="number" id="amount" name="amount" step="0.01" placeholder="$12.34" required></td>
                         <td><input type="text" id="receipt" name="receipt" placeholder="Path:"></td>
                     </tr> 
                     <tr>
