@@ -71,7 +71,7 @@
             </table>
 
             <table>
-                <form id="transactionForm" method="POST" action="new_transaction.php">
+                <form id="transactionForm" method="POST" action="new_transaction.php" enctype="multipart/form-data">
                     <tr>
                         <th colspan="4">New Transaction</th>
                     </tr>
@@ -79,7 +79,12 @@
                         <td><input type="date" id="date" name="date" required></td>
                         <td><input type="text" id="description" name="description" placeholder="Description:" required></td>
                         <td><input type="number" id="amount" name="amount" step="0.01" placeholder="$12.34" required></td>
-                        <td><input type="text" id="receipt" name="receipt" placeholder="Path:"></td>
+                        <td>
+                            <label for="receipt" class="custom-file-upload">
+                            <input type="file" id="receipt" name="receipt">
+                            Upload File
+                            </label>
+                        </td>
                     </tr> 
                     <tr>
                         <td colspan="4"><input type="submit"></input></td>
