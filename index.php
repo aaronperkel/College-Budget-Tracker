@@ -79,12 +79,7 @@
                         <td><input type="date" id="date" name="date" required></td>
                         <td><input type="text" id="description" name="description" placeholder="Description:" required></td>
                         <td><input type="number" id="amount" name="amount" step="0.01" placeholder="$12.34" required></td>
-                        <td>
-                            <label for="receipt" class="custom-file-upload">
-                            <input type="file" id="receipt" name="receipt">
-                            Upload File
-                            </label>
-                        </td>
+                        <td><input type="text" id="receipt" name="receipt" placeholder="Path:" required></td>
                     </tr> 
                     <tr>
                         <td colspan="4"><input type="submit"></input></td>
